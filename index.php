@@ -19,7 +19,7 @@
 <?php
 include ("header.php");
 $pag="home";
-$vetValidas = array ("pagina_02", "pagina_03");
+$vetValidas = array ("sobre", "form","pesquisa");
 if(isset($_REQUEST ['p']))
 {
 $pag= $_REQUEST ['p'];
