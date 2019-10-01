@@ -7,11 +7,11 @@
                 </a>
             </div>
             <nav class="grid-12 header-menu">
-                <ul>
-                    <li><a href="?p=home.php">Home</a></li>
-                    <li><a href="?p=sobre">Sobre</a></li>
-                    <li><a href="?p=form">Contate-nos</a></li>
-                    <li><img src="img/search.png" alt="pesquisar"></li>
+                
+                    <a href="?p=home.php" class="active">Home</a>
+                    <a href="?p=sobre">Sobre</a>
+                    <a href="?p=form">Contate-nos</a>
+                    <!--<img src="img/search.png" alt="pesquisar">-->
 
                 </ul>
             </nav>
