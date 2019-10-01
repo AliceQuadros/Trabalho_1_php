@@ -1,17 +1,17 @@
 <!-- header -->
 <header class="header">
 <div class="container">
-            <div>
-                <a href="home" class="grid-8 ">
-                    <img src="LOGO DO SITE" alt="alguma coisa">
+            <div class="logo">
+                <a href="?p=home" class="grid-4 ">
+                    <img src="img/logo_alika.png" alt="Logo ALIKA">
                 </a>
             </div>
-            <nav class="grid-8 header-menu">
-                <ul>
-                    <li><a href="?p=home">Home</a></li>
-                    <li><a href="?p=sobre">Sobre</a></li>
-                    <li><a href="?p=form">Contate-nos</a></li>
-                    <li><img src="img/search.png" alt="pesquisar"> <input type="text" name="busca" placeholder="pesquise aqui por um título"> <input type="submit" value="ok"> </li>
+            <nav class="grid-12 header-menu">
+                
+                    <a href="?p=home" class="active">Home</a>
+                    <a href="?p=sobre">Sobre</a>
+                    <a href="?p=form">Contate-nos</a>
+                    <!--<img src="img/search.png" alt="pesquisar">-->
 
                 </ul>
             </nav>
