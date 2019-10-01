@@ -4,10 +4,11 @@
      height: 100%;
  }
 
- nav {
+.header {
     font-weight: bold;
     display: inline-block;
     background-color: #fab316;
+    width: 100%;
 
  }
 
