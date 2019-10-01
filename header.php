@@ -3,7 +3,7 @@
 <div class="container">
             <div class="logo">
                 <a href="?p=home" class="grid-4 ">
-                    <img src="img/logo_alika.png" alt="Logo ALIKA">
+                    <img src="img/logo.png" alt="Logo ALIKA">
                 </a>
             </div>
             <nav class="grid-12 header-menu">
