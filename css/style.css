@@ -33,3 +33,8 @@
     border-bottom: 0.125em solid #1a242d;
   }
   
+
+  .logo img {
+       width: 30%;
+       height: 30%; 
+  }
