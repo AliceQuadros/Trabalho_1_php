@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>TROCAR</title>
+    <title>ALIKA</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/grid.css">
