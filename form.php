@@ -1,4 +1,5 @@
 <section class="contato container">
+    <div class="grid-14">
         <form action="" id="form-orcamento" class="contato-form grid-8">
             <div class="row">
                 <div class="grid-4">
@@ -20,3 +21,5 @@
             <textarea id="espec" value='<?=$mensagem?>' placeholder="Digite sua Mensagem..."></textarea>
             <button type="submit" class="btn">Enviar</button>
         </form>
+</div>
+</section>
