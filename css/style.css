@@ -2,6 +2,8 @@
  html, body {
      background-color: #EFEEEF;
      height: 100%;
+     margin: o;
+     padding: 0;
  }
 
 .header {
@@ -37,4 +39,42 @@
   .logo img {
        width: 30%;
        height: 30%; 
+  }
+
+  #rodape {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    left:0;
+    background-color: #1a242d;
+    margin-top: 10%;
+    height: 60px;
+  }
+
+
+  #copyright {
+    font-size: 0.687em;
+    color: #d9d9d9;
+    display: inline-block;
+    padding: 1em 0;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+  }
+
+  #copyright a {
+    color: white;
+    position: relative;
+  }
+
+  #rodape a {
+    padding-top: 10px;
+    display: inline-block;
+    z-index: 10;
+  }
+  #rodape a svg {
+    width: 100%;
+    fill: white;
   }
