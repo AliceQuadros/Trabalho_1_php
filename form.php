@@ -1,6 +1,6 @@
 <section class="contato container">
     <div class="grid-14">
-        <form action="" id="form-orcamento" class="contato-form grid-8">
+        <form action="post" id="form-orcamento" class="contato-form grid-8">
             <div class="row">
                 <div class="grid-4">
                     <label for="nome">Nome</label>
