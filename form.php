@@ -1,5 +1,10 @@
 <section class="contato container">
+<<<<<<< HEAD
         <form action="" id="form-orcamento" class="contato-form grid-8" enctype="multipart/form-data">
+=======
+    <div class="grid-14">
+        <form action="" id="form-orcamento" class="contato-form grid-8">
+>>>>>>> karine
             <div class="row">
                 <div class="grid-4">
                     <label for="nome">Nome</label>
@@ -22,3 +27,5 @@
             <textarea name="mensagem" value='<?=$mensagem?>' placeholder="Digite sua Mensagem..."></textarea>
             <button type="submit" class="btn">Enviar</button>
         </form>
+</div>
+</section>
