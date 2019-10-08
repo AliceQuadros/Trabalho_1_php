@@ -18,10 +18,8 @@
             <label for="telefone">Telefone</label>
             <input type="number" value='<?=$fone?>' placeholder="(53) 999999999" name="telefone">
             <label for="espec">Especificações</label>
-            <label for="imagem">Enviar Imagem</label>
-            <input type="file" name="upload">
             <textarea name="mensagem" value='<?=$mensagem?>' placeholder="Digite sua Mensagem..."></textarea>
-            <button type="submit" class="btn">Enviar</button>
+            <button type="submit" >Enviar</button>
         </form>
         </div>
  </section>

@@ -4,12 +4,24 @@
 @$imagem =  $_REQUEST['imagem'];
 @$posicao  = $_REQUEST['posicao'];
 
-if(isset($_REQUEST['botao'])== 'incluir'){
-    
-    $erros = validaForm($_REQUEST, array('nome:texto:Nome é obrigatório',
-                                         'sobrenome:texto:Sobrenome é obrigatório',
-                                         'email:email:Deve ser um e-mail válido'));
-   if (strlen($erros)==0) {
+if(isset($_REQUEST['botao']) == 'incluir'){
+    $flag = 0;
+    if(isset($_REQUEST['botao']) == 'enviar'){
+        @$titulo = $_REQUEST['titulo'];
+        @$texto = $_REQUEST['texto'];
+        @$imagem =  $_REQUEST['imagem'];
+        @$posicao  = $_REQUEST['posicao'];
+        if(strlen(trim($titulo)) == 0){
+            $erros = "Preencha o titulo<br>";
+            $flag = 1;
+        }
+        if(strlen(trim($texto)) == 0){
+            $erros = "Preencha o texto<br>";  
+            $flag = 1;
+        }
+
+    }
+   if ($flag == 0) {
     
     $id = 0;
     $sql = "INSERT INTO `artigo` (`artTitul`,`artTexto`,`artImage`, `artImpos`) VALUES (?,?,?,?);";
@@ -19,12 +31,11 @@ if(isset($_REQUEST['botao'])== 'incluir'){
                                             $posicao,),$id);
    
 
-   if($retorno[1] != null) {
+   if($flag == 1) {
         echo("<pre>Erro: <br>");
-        print_r($retorno);
+        print_r($erros);
    } 
    else {
-    echo("Registro incluído com sucesso com o código: $novoCodigo<hr>");
 
     if (isset($_FILES['upload'])) {
      include("upload.php");
@@ -44,7 +55,7 @@ if(isset($_REQUEST['botao'])== 'incluir'){
    }
 
     
-}//fim botao enviar
+}
 else {
     include ("incluir_form.php");
 }
