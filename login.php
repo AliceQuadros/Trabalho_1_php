@@ -1,6 +1,5 @@
 <?php
 
- 
  session_start(); 
       //chama função que inicia uma nova sessão ou resume uma sessão existente
 if (isset($_REQUEST['login'])) {
