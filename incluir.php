@@ -4,7 +4,8 @@
 @$imagem =  $_REQUEST['imagem'];
 @$posicao  = $_REQUEST['posicao'];
 
-if(isset($_REQUEST['botao'])){
+if (isset($_REQUEST['botao']) == 'incluir') 
+
     
     $erros = validaForm($_REQUEST, array('nome:texto:Nome é obrigatório',
                                          'sobrenome:texto:Sobrenome é obrigatório',
@@ -18,7 +19,7 @@ if(isset($_REQUEST['botao'])){
                                             $imagem,
                                             $posicao,),$id);
     
-    if (isset($_FILES['arquivoParaUpload'])) {
+    if (isset($_FILES['upload'])) {
         include("upload.php");
        
        }

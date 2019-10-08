@@ -73,6 +73,10 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 14px;
 }
+section .container
+{
+    margin: 0px auto;
+}
 
 
 

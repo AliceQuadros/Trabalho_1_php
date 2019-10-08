@@ -1,8 +1,5 @@
-
-<?php
-include ("verificalogin.php");
-?>
-
+<!--criar separado no incluir_form -->
+<!-- criar um botao que chame a inclusao -->
 <div class="container">
     <form action="post" id="form-orcamento" class="contato-form">
 
@@ -21,13 +18,26 @@ include ("verificalogin.php");
 
 
 
-        <input type="submit" value="Enviar">
+        <input type="submit" name="botao" value="inserir">
 </div>
 
 
 </div>
+<!-- na home tem que aparecer os posts, e embaixo ou outro lugar q tu quiser colocar tem que ter o botão de alterar e de excluir -->
 <?php
 
 
 
+if (isset($_REQUEST['botao']) == 'inserir') 
+{
+        include("incluir.php");
+}
+if (isset($_REQUEST['botao']) == 'alterar') 
+{
+        include("alterar.php");
+}
+if (isset($_REQUEST['botao']) == 'excluir') 
+{
+        include("excluir.php");
+}
 ?>
