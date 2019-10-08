@@ -23,5 +23,4 @@
             <textarea name="mensagem" value='<?=$mensagem?>' placeholder="Digite sua Mensagem..."></textarea>
             <button type="submit" class="btn">Enviar</button>
         </form>
-</div>
-</section>
+ </section>
