@@ -18,13 +18,17 @@
 
 <?php
 include ("header.php");
+//include ("verificalogin.php");
 $pag="home";
 $vetValidas = array ("sobre", "form","pesquisa");
+
+
 if(isset($_REQUEST ['p']))
 {
 $pag= $_REQUEST ['p'];
 }
 include($pag .".php");
+
 include ("footer.php");
 
 ?>
