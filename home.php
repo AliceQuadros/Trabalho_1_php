@@ -18,24 +18,24 @@
 @$sql = "INSERT INTO  'posts' ('cdpost',	'titulo', 'resumo', 'texto', 'imagem', 'posicao', 'data')
         VALUES (NULL,  '$titulo', '$resumo', '$texto', '$imagem', '$posicao', CURRENT_TIMESTAMP);";
 
-if((@$_REQUEST['login']) == 'enviar'){
+if(@$_SESSION['usuario']){
     ?>
     <form method="post">
-    <input type="submit" name="botao" value="inserir">
-    <input type="submit" name="botao" value="alterar">
-    <input type="submit" name="botao" value="excluir">
+    <input type="submit" name="botao" value="Inserir">
+    <input type="submit" name="botao" value="Alterar">
+    <input type="submit" name="botao" value="Excluir">
 </form>
 
 <?php
-if (isset($_REQUEST['botao']) == 'inserir') 
+if (isset($_REQUEST['botao']) == 'Inserir') 
 {
         include("incluir.php");
 }
-if (isset($_REQUEST['botao']) == 'alterar') 
+if (isset($_REQUEST['botao']) == 'Alterar') 
 {
         include("alterar.php");
 }
-if (isset($_REQUEST['botao']) == 'excluir') 
+if (isset($_REQUEST['botao']) == 'Excluir') 
 {
         include("excluir.php");
 }
