@@ -1,3 +1,8 @@
+<?php
+session_start();
+include ("verificalogin.php");
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -23,9 +28,9 @@ $pag="home";
 $vetValidas = array ("sobre", "form","pesquisa");
 
 
-if(isset($_REQUEST ['p']))
+if(isset($_REQUEST['p']))
 {
-$pag= $_REQUEST ['p'];
+$pag= $_REQUEST['p'];
 }
 include($pag .".php");
 

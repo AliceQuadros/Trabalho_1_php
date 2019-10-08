@@ -1,12 +1,17 @@
 <?php
-
- session_start(); 
+@session_start(); 
       //chama função que inicia uma nova sessão ou resume uma sessão existente
-if (isset($_REQUEST['login'])) {
+//if (isset($_REQUEST['login'])) {
     
     //-----------------------------LOGIN-----------------------------------
 
-    if (isset($_REQUEST['login']) == 'entrar') { //verifica se login está ok
+
+    if((@$_REQUEST['login']) == 'sair'){
+        session_destroy();//chama função que destrói sessão
+        header("Location: index.php"); //redireciona para o index.php
+    }
+
+    if ((@$_REQUEST['login']) == 'enviar') { //verifica se login está ok
 
         @$senha = $_REQUEST['pass']; // @$senha recebe password
         @$usuario = $_REQUEST['user']; // @$usuario recebe user  
@@ -19,12 +24,11 @@ if (isset($_REQUEST['login'])) {
             include("loginform.php"); //mostra novamente o formulário para nova tentativa de login
         }
     }
-
+    else {
+        include("loginform.php");
+    }
     //----------------------------------LOGOUT----------------------------------
 
-    if(isset($_REQUEST['logout']) == 'sair'){
-        session_destroy();//chama função que destrói sessão
-        header("Location: index.php"); //redireciona para o index.php
-    }
-}
+   
+
 ?>
