@@ -1,5 +1,10 @@
 <!--criar separado no incluir_form -->
 <!-- criar um botao que chame a inclusao -->
+<?php
+
+include ("verificalogin.php");
+?>
+
 <div class="container">
     <form action="post" id="form-orcamento" class="contato-form">
 
@@ -7,7 +12,7 @@
         <label for="nome">Título</label>
         <input type="text" value='<?=@$titulo?>' placeholder="Titulo" id="titulo">
         <br>
-
+''
         <label for="resumo">Resumo</label>
         <textarea id="resumo" name="resumo" rows="2" colums="10" placeholder="Escreva seu resumo aqui:" value='<?=@$resumo?>'></textarea>
         
@@ -27,6 +32,8 @@
 <?php
 
 
+$sql = "INSERT INTO  'posts' ('cdpost',	'titulo', 'resumo', 'texto', 'imagem', 'posicao', 'data')
+        VALUES (NULL,  '$titulo', '$resumo', '$texto', '$imagem', '$posicao', CURRENT_TIMESTAMP);";
 
 if (isset($_REQUEST['botao']) == 'inserir') 
 {
