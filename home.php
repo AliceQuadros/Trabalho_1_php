@@ -1,5 +1,5 @@
 <div class="container">
-    <form action="post" id="form-orcamento" class="contato-form grid-14">
+    <form action="post" id="form-orcamento" class="contato-form">
 
 
         <label for="nome">Título</label>
@@ -12,6 +12,7 @@
         <label for="texto">Post</label>
         <textarea id="texto" name="texto" rows="10" colums="10" placeholder="Escreva seu texto aqui:" value='<?=@$texto?>'></textarea>
 
+        
 
 
 
@@ -22,7 +23,6 @@
 </div>
 <?php
 
-$sql = "INSERT INTO  'posts' ('cdpost',	'titulo', 'resumo', 'texto', 'imagem', 'posicao', 'data')
-        VALUES (NULL,  '$titulo', '$resumo', '$texto', '$imagem', '$posicao', CURRENT_TIMESTAMP);";
+
 
 ?>
