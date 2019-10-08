@@ -18,7 +18,7 @@
 
 <?php
 include ("header.php");
-include ("verificalogin.php");
+
 $pag="home";
 $vetValidas = array ("sobre", "form","pesquisa");
 
