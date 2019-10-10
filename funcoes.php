@@ -45,4 +45,35 @@ function fazConsultaSegura($sql,$parametros=array(),&$id=-1){
 }
 
 
+function validaForm($vetorDados, $vetorValidacao) {
+    $erros = '';
+    for ($i=0; $i<count($vetorValidacao); $i++){
+        $vetItemValid = explode(":",$vetorValidacao[$i]);
+        $campo = $vetItemValid[0];
+        $tipo = $vetItemValid[1];
+        $mensagem = $vetItemValid[2];
+        //testa se campo deve ser validado
+        if(array_key_exists($campo,$vetorDados) === true){
+            $valor = trim($vetorDados[$campo]);
+            switch($campo) {
+                case 'texto' :
+                if (strlen($valor) == 0) {
+                    $erros =  $mensagem ;
+                    echo($erros);
+                }
+                break;
+                case 'titulo' :
+                if (strlen($valor) == 0) {
+                    $erros =  $mensagem ;
+                }
+                break;
+            }
+
+        }
+        
+    }
+return($erros);
+}
+
+
 ?>

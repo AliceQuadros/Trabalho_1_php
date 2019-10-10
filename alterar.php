@@ -1,12 +1,12 @@
 <?php
 
-if(isset($_REQUEST['botao'])){
+
     if ($_REQUEST['botao'] == 'alterar') {
        
-        $id = $_REQUEST['id'];
+        $id = $item['artCodig'];
         $sql = "select * from contato where artCodig = ?";
-        $resultado = fazConsultaSegura($sql,array($id));
-        $registro = $resultado[0];
+        $resultado = fazConsultaSegura($sql,array($item['artCodig']));
+        $registro = $resultado;
 
         @$titulo = $_REQUEST['titulo'];
         @$texto = $_REQUEST['texto'];
@@ -16,15 +16,15 @@ if(isset($_REQUEST['botao'])){
     }
     else if ($_REQUEST['botao'] == 'salvar') {
 
-        $erros = validaForm($_REQUEST, array('nome:texto:Nome é obrigatório',
-                                         'sobrenome:texto:Sobrenome é obrigatório',
-                                         'email:email:Deve ser um e-mail válido'));
+        // $erros = validaForm($_REQUEST, array('nome:texto:Nome é obrigatório',
+        //                                  'sobrenome:texto:Sobrenome é obrigatório',
+        //                                  'email:email:Deve ser um e-mail válido'));
         @$titulo = $_REQUEST['titulo'];
         @$texto = $_REQUEST['texto'];
         @$imagem =  $_REQUEST['imagem'];
         @$posicao  = $_REQUEST['posicao'];
        
-        if (strlen($erros)==0) {
+        // if (strlen($erros)==0) {
                     $sql = "UPDATE `artigo` SET `artTitul` = ?, `artTexto` = ?, `artImage` = ?, `artImpos` = ? WHERE `artCodig` = ?";
                     $retorno = fazConsultaSegura($sql,array($titulo,
                     $texto,
@@ -37,13 +37,13 @@ if(isset($_REQUEST['botao'])){
                     $imagem =  '';
                     $posicao =  '';
 
-            }
-            else {
-                echo("$erros<hr>");
-                include("alteracao_form.php");
-            }
+        //     }
+        //     else {
+        //         echo("$erros<hr>");
+        //         include("alteracao_form.php");
+        //     }
         }
-}
+
     
 
 

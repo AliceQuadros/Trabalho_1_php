@@ -10,18 +10,12 @@ if(($_REQUEST['botao']) == 'enviar'){
         @$titulo = $_REQUEST['titulo'];
         @$texto = $_REQUEST['texto'];
         @$imagem =  $_FILES['upload']['name'];
-
         @$posicao  = $_REQUEST['posicao'];
-        if(strlen(trim($titulo)) == 0){
-            $erros = "Preencha o titulo<br>";
-            $flag = 2;
-        }
-        if(strlen(trim($texto)) == 0){
-            $erros = "Preencha o texto<br>";  
-            $flag = 2;
-        }
-        
-   if ($flag==0) {
+        // teste preenchimento
+        $erros = validaForm($_REQUEST, array(
+                                         'texto:texto:Texto é obrigatório'));
+        // 
+    if (strlen($erros)==0){
     
     $id = 0;
     $sql = "INSERT INTO `artigo` (`artTitul`,`artTexto`,`artImage`, `artImpos`) VALUES (?,?,?,?);";
@@ -29,28 +23,25 @@ if(($_REQUEST['botao']) == 'enviar'){
                                             $texto,
                                             $imagem,
                                             $posicao,),$id);
-    print_r($retorno);
-   if($flag == 2) {
-       
-        echo("<pre>Errooooooooooou <br>");
-        echo($erros);
-   } 
-   else {
-    echo("Sem ERROS: <hr>");
+
+                                            
+
+ 
+    echo("Sem erros. <hr>");
 
     if (($_FILES['upload']['name'])!='') {
      include("upload.php");
     
     }
    
-   }
+   
 
    $titulo = '';     
    $texto = '';
    $imagem =  '';
    $posicao =  '';
    }
-   else {
+   else if (strlen($erros)!=0) {
       echo ("$erros<hr>");
       include ("incluir_form.php");
    }
