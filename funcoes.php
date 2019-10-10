@@ -19,19 +19,6 @@ function fazconexao(){
 
 }
 
-function fazConsulta($sql){
-    try {
-        $conexaoBD = fazConexao();
-        $consulta = $conexaoBD->prepare($sql);
-        $consulta->execute();
-        $resultados = $consulta->fetchAll(PDO::FETCH_ASSOC);
-        return($resultados);
-    }
-    catch (PDOException $e) {
-        return($e);
-    }
-}
-
 function fazConsultaSegura($sql,$parametros=array(),&$id=-1){
     try {
         $conexaoBD = fazConexao();

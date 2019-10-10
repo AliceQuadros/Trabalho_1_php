@@ -1,27 +1,27 @@
 <?php
+
 @$titulo = $_REQUEST['titulo'];
 @$texto = $_REQUEST['texto'];
-@$imagem =  $_REQUEST['imagem'];
+@$imagem =  $_FILES['upload']['name'];
 @$posicao  = $_REQUEST['posicao'];
-
-if(isset($_REQUEST['botao']) == 'incluir'){
-    $flag = 0;
-    if(isset($_REQUEST['botao']) == 'enviar'){
+if(($_REQUEST['botao']) == 'enviar'){
+    
+        @$flag = 0;
         @$titulo = $_REQUEST['titulo'];
         @$texto = $_REQUEST['texto'];
-        @$imagem =  $_REQUEST['imagem'];
+        @$imagem =  $_FILES['upload']['name'];
+
         @$posicao  = $_REQUEST['posicao'];
         if(strlen(trim($titulo)) == 0){
             $erros = "Preencha o titulo<br>";
-            $flag = 1;
+            $flag = 2;
         }
         if(strlen(trim($texto)) == 0){
             $erros = "Preencha o texto<br>";  
-            $flag = 1;
+            $flag = 2;
         }
-
-    }
-   if ($flag == 0) {
+        
+   if ($flag==0) {
     
     $id = 0;
     $sql = "INSERT INTO `artigo` (`artTitul`,`artTexto`,`artImage`, `artImpos`) VALUES (?,?,?,?);";
@@ -29,15 +29,16 @@ if(isset($_REQUEST['botao']) == 'incluir'){
                                             $texto,
                                             $imagem,
                                             $posicao,),$id);
-   
-
-   if($flag == 1) {
-        echo("<pre>Erro: <br>");
-        print_r($erros);
+    print_r($retorno);
+   if($flag == 2) {
+       
+        echo("<pre>Errooooooooooou <br>");
+        echo($erros);
    } 
    else {
+    echo("Sem ERROS: <hr>");
 
-    if (isset($_FILES['upload'])) {
+    if (($_FILES['upload']['name'])!='') {
      include("upload.php");
     
     }
