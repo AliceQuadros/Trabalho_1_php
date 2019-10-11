@@ -64,11 +64,25 @@ foreach ($retorno as $item) {
 
 <?php
 if (isset($_REQUEST['botao']) == 'alterar') 
+if(@$_SESSION['usuario']){
+    ?>
+    <form method="post">
+    <input type="submit" name="botao" value="Inserir">
+    <input type="submit" name="botao" value="Alterar">
+    <input type="submit" name="botao" value="Excluir">
+</form>
+
+<?php
+if (isset($_REQUEST['botao']) == 'Inserir') 
+{
+        include("incluir.php");
+}
+if (isset($_REQUEST['botao']) == 'Alterar') 
 {
     include("alterar.php");
     
 }
-if (isset($_REQUEST['botao']) == 'excluir') 
+if (isset($_REQUEST['botao']) == 'Excluir') 
 {
     include("excluir.php");
 }

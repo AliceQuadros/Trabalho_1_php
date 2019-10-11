@@ -16,9 +16,6 @@ include ("verificalogin.php");
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/favicon.ico">
-
-    
-
 </head>
 <body>
     
