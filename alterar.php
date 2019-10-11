@@ -4,9 +4,9 @@
     if ($_REQUEST['botao'] == 'alterar') {
        
         $id = $item['artCodig'];
-        $sql = "select * from contato where artCodig = ?";
+        // $sql = "select * from contato where artCodig = ?";
         $resultado = fazConsultaSegura($sql,array($item['artCodig']));
-        $registro = $resultado;
+        // $registro = $resultado;
 
         @$titulo = $_REQUEST['titulo'];
         @$texto = $_REQUEST['texto'];

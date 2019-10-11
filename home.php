@@ -10,8 +10,7 @@
 ?>
 
 <form method="post">
-    <input type="submit" name="botao" value="inserir">
-   
+    <input type="submit" name="botao" value="inserir">   
 </form>
 
 <!-- na home tem que aparecer os posts, e embaixo ou outro lugar q tu quiser colocar tem que ter o botão de alterar e de excluir -->
@@ -20,7 +19,7 @@
 $sql = "SELECT * FROM `artigo`;";
     $retorno = fazConsultaSegura($sql);
                                            
-
+include("upload.php");
 
 foreach ($retorno as $item) {
 
@@ -48,39 +47,46 @@ foreach ($retorno as $item) {
         </td>
     </tr>
     <tr>
+    <!-- arrumar -->
         <td>Imagem: </td> 
         <td>
-         <img src="upload/<?=$item['artCodig'];?>.jpg" alt="imagem do post">
+         <img src="upload/<?=$item['artCodig'];?>.<?=$tipoArquivoImagem;?> " alt="imagem do post">
         </td>
         <td>
             
         </td>
     </tr>
-    
+    <!--  -->
 </table><br>
 <input type="submit" name="botao" value="alterar">
-    <input type="submit" name="botao" value="excluir">
+<input type="submit" name="botao" value="excluir">
 </form>
 
-<?php }
+<?php
+if (isset($_REQUEST['botao']) == 'alterar') 
+{
+    include("alterar.php");
+    
+}
+if (isset($_REQUEST['botao']) == 'excluir') 
+{
+    include("excluir.php");
+}
+
+}
 
 
 // if((@$_REQUEST['login']) == 'enviar'){
 
   
 
-
-if ((@$_REQUEST['botao']) == 'inserir') 
-{
+    if (isset($_REQUEST['botao']) == 'inserir') 
+    {  
         include("incluir.php");
-}
-if ((@$_REQUEST['botao']) == 'alterar') 
-{
-        include("alterar.php");
-}
-if ((@$_REQUEST['botao']) == 'excluir') 
-{
-        include("excluir.php");
-}
+    }
+
+
+
+
 
 ?>
