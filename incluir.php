@@ -45,11 +45,9 @@ if (($_REQUEST['botao']) === 'enviar') {
                     $retorno = fazConsultaSegura($sql,array(
                     $arquivo,
                     $id));
+        header("Location: index.php");
 
-        $titulo = '';
-        $texto = '';
-        $imagem = '';
-        $posicao = '';
+
         //     }
         // //    else if (strlen($erros)!=0) {
         // //       echo ("$erros<hr>");

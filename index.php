@@ -24,7 +24,7 @@ include ("verificalogin.php");
 include ("header.php");
 
 $pag="home";
-$vetValidas = array ("sobre", "form","pesquisa");
+$vetValidas = array ("sobre", "form_contato/form","pesquisa");
 
 
 if(isset($_REQUEST['p']))

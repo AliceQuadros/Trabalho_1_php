@@ -10,7 +10,18 @@
                 
                     <a href="?p=home" class="active">Home</a>
                     <a href="?p=sobre">Sobre</a>
-                    <a href="?p=form">Contate-nos</a>
+                    <?php
+                    if (@$_SESSION['usuario']) {
+                    ?>
+                    <a href="?p=mensagem_adm/exibe_mensa">Mensagens</a>
+                    <?php }
+                    else{
+                    ?>
+                    <a href="?p=form_contato/form">Contate-nos</a>
+                    <?php }
+                    ?>
+
+
                     <!--<img src="img/search.png" alt="pesquisar">-->
 
                 </ul>

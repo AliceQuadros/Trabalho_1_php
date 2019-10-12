@@ -10,7 +10,7 @@ $id = $_POST['codigo'];
         $texto = $_POST['texto'];
         // $imagem =  $_POST['upload'];
         $posicao  = $_POST['posicao'];
-       echo($titulo);
+
         // if (strlen($erros)==0) {
                     // $sql = "UPDATE `artigo` SET `artTitul` = ?, `artTexto` = ?, `artImage` = ?, `artImpos` = ? WHERE `artCodig` = ?";
                     // $retorno = fazConsultaSegura($sql,array($titulo,
@@ -29,7 +29,6 @@ $id = $_POST['codigo'];
                     $texto = '';
                     // $imagem =  '';
                     $posicao =  '';
-                    echo("FUNCIONO");
                     // header("Location: index.php");
         //     }
         //     else {

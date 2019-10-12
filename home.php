@@ -17,7 +17,7 @@ if (isset($_REQUEST['botao']) == 'inserir') {
         include "incluir.php";
     }
 }
-$sql = "SELECT * FROM `artigo`;";
+$sql = "SELECT *, DATE_FORMAT (artData, '%d/%m/%Y %H:%i:%s' ) FROM `artigo` ORDER BY `artData` desc";
 $retorno = fazConsultaSegura($sql);
 foreach ($retorno as $item) {
     ?>
@@ -30,6 +30,10 @@ foreach ($retorno as $item) {
         <tr>
         <td>Texto: </td>
         <td><?=$item['artTexto'];?></td>
+        </tr>
+        <tr>
+        <td>Data: </td>
+        <td><?=$item['artData'];?></td>
         </tr>
     <!-- arrumar -->
     <?php
