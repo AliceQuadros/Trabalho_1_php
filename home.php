@@ -25,19 +25,19 @@ foreach ($retorno as $item) {
         <table class="tableconsulta">
         <tr>
         <td>Título: </td>
-        <td><?=$item['artTitul'];?></td>
+        <td><?=@$item['artTitul'];?></td>
         </tr>
         <tr>
         <td>Texto: </td>
-        <td><?=$item['artTexto'];?></td>
+        <td><?=@$item['artTexto'];?></td>
         </tr>
         <tr>
         <td>Data: </td>
-        <td><?=$item['artData'];?></td>
+        <td><?=@$item['artData'];?></td>
         </tr>
     <!-- arrumar -->
     <?php
-    if($item['artImage'] != null)
+    if(@$item['artImage'] != null)
     {
     ?>
         <tr>

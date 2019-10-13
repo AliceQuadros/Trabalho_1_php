@@ -1,7 +1,7 @@
 <?php
-session_start();
+
 include ("funcoes.php");
-include ("verificalogin.php");
+
 
 ?>
 

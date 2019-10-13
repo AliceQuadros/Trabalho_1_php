@@ -6,12 +6,12 @@
     //-----------------------------LOGIN-----------------------------------
 
 
-    if((@$_REQUEST['login']) == 'sair'){
+    if((@$_REQUEST['login']) == 'Sair'){
         session_destroy();//chama função que destrói sessão
         header("Location: index.php"); //redireciona para o index.php
     }
 
-    if ((@$_REQUEST['login']) == 'enviar') { //verifica se login está ok
+    if ((@$_REQUEST['login']) == 'Enviar') { //verifica se login está ok
 
         @$senha = $_REQUEST['pass']; // @$senha recebe password
         @$usuario = $_REQUEST['user']; // @$usuario recebe user  
