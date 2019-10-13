@@ -19,7 +19,15 @@ if (isset($_REQUEST['botao']) == 'inserir') {
 }
 $sql = "SELECT *, DATE_FORMAT (artData, '%d/%m/%Y %H:%i:%s' ) FROM `artigo` ORDER BY `artData` desc";
 $retorno = fazConsultaSegura($sql);
+
+
+
+
+
+
 foreach ($retorno as $item) {
+    $texto=resumeTexto($item['artTexto'],$numPal=15);
+
     ?>
         <form method="post">
         <table class="tableconsulta">
@@ -29,7 +37,7 @@ foreach ($retorno as $item) {
         </tr>
         <tr>
         <td>Texto: </td>
-        <td><?=$item['artTexto'];?></td>
+        <td><?=$texto;?></td>
         </tr>
         <tr>
         <td>Data: </td>
@@ -52,6 +60,9 @@ foreach ($retorno as $item) {
         <?php
 if (@$_SESSION['usuario']) {
         ?>
+        <form action="post.php" method="POST">
+            <button type="submit" name="ver" value="<?=$item['artCodig'];?>">Ver Post</button>
+        </form>
         <form action="alteracao_form.php" method="POST">
             <button type="submit" name="alterar" value="<?=$item['artCodig'];?>">alterar</button>
         </form>

@@ -75,5 +75,15 @@ function validaForm($vetorDados, $vetorValidacao) {
 return($erros);
 }
 
+function resumeTexto($texto,$numPal){
+    $vetor = explode(" ",$texto);
+    if (count($vetor) < $numPal) 
+        $numPal = count($vetor);
+    $texto = '';
+    for($i=0; $i< $numPal; $i++){
+        $texto .= $vetor[$i] . " ";
+    }
+    return($texto);
+}
 
 ?>

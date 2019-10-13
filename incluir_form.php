@@ -9,9 +9,9 @@
         Texto: <input type="text" name="texto" value="<?=$texto?>"> <br>
         Posição: <input type="text" name="posicao" value="<?=$posicao?>"> <br>
         <label for="imagem">Enviar Imagem</label>
-        <input type="file" name="upload" value="<?=$imagem ?>">
+        <input type="file" name="upload" value="<?=$imagem?>">
         <input type="submit" name="botao" value="enviar">
-
+        <input type="submit" name="botao" value="cancelar">
     </form>
 
 </div>

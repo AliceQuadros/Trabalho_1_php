@@ -1,6 +1,15 @@
 <?php
 include "funcoes.php";
 $id = $_POST['codigo'];
+$nm_image = $_POST['image'];
+$imagem = $_FILES['upload']['name'];
+
+
+if ($imagem) {
+    unlink("upload/".$nm_image);
+    include "upload.php"; 
+}
+
     if ($_REQUEST['botao'] == 'salvar') {
 
         // $erros = validaForm($_REQUEST, array('nome:texto:Nome é obrigatório',
@@ -8,7 +17,6 @@ $id = $_POST['codigo'];
         //                                  'email:email:Deve ser um e-mail válido'));
         $titulo = $_POST['titulo'];
         $texto = $_POST['texto'];
-        // $imagem =  $_POST['upload'];
         $posicao  = $_POST['posicao'];
 
         // if (strlen($erros)==0) {
@@ -19,17 +27,19 @@ $id = $_POST['codigo'];
                     // $posicao,),
                     // $id);
 
-                    $sql = "UPDATE `artigo` SET `artTitul` = ?, `artTexto` = ?, `artImpos` = ? WHERE `artCodig` = ?";
+                    $sql = "UPDATE `artigo` SET `artTitul` = ?, `artTexto` = ?, `artImpos` = ? , `artImage` = ? WHERE `artCodig` = ?";
                     $retorno = fazConsultaSegura($sql,array(
                     $titulo,
                     $texto,
-                    $posicao,$id));
+                    $posicao,
+                    $arquivo,
+                    $id));
                    
                     $titulo = '';     
                     $texto = '';
                     // $imagem =  '';
                     $posicao =  '';
-                    // header("Location: index.php");
+                    header("Location: index.php");
         //     }
         //     else {
         //         echo("$erros<hr>");

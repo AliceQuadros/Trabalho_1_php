@@ -58,3 +58,6 @@ if (($_REQUEST['botao']) === 'enviar') {
 } else if ($_REQUEST['botao'] == 'inserir') {
     include "incluir_form.php";
 }
+else if ($_REQUEST['botao'] == 'cancelar') {
+    header("Location: index.php");
+}
