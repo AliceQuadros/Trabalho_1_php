@@ -4,9 +4,6 @@
 <!-- na home tem que aparecer os posts, e embaixo ou outro lugar q tu quiser colocar tem que ter o botão de alterar e de excluir -->
 <?php
 
-// include_once "funcoes.php";
-
-
 if (@$_SESSION['usuario']) {
     ?>
         <form method="post">
@@ -19,11 +16,6 @@ if (isset($_REQUEST['botao']) == 'inserir') {
 }
 $sql = "SELECT *, DATE_FORMAT (artData, '%d/%m/%Y %H:%i:%s' ) FROM `artigo` ORDER BY `artData` desc";
 $retorno = fazConsultaSegura($sql);
-
-
-
-
-
 
 foreach ($retorno as $item) {
     $texto=resumeTexto($item['artTexto'],$numPal=15);
