@@ -28,6 +28,8 @@ if (($_REQUEST['botao']) === 'enviar') {
         //
         // if (strlen($erros)==0){
 
+
+
         $id = 0;
         $sql = "INSERT INTO `artigo` (`artTitul`,`artTexto`,`artImage`, `artImpos`) VALUES (?,?,?,?);";
         $retorno = fazConsultaSegura($sql, array($titulo,

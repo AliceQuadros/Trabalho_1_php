@@ -55,16 +55,15 @@ function validaForm($vetorDados, $vetorValidacao) {
         //testa se campo deve ser validado
         if(array_key_exists($campo,$vetorDados) === true){
             $valor = trim($vetorDados[$campo]);
-            switch($campo) {
+            switch($tipo) {
                 case 'texto' :
                 if (strlen($valor) == 0) {
-                    $erros =  $mensagem ;
-                    echo($erros);
+                    $erros .=  $mensagem . "<BR>";
                 }
                 break;
-                case 'titulo' :
-                if (strlen($valor) == 0) {
-                    $erros =  $mensagem ;
+                case 'email' :
+                if (!filter_var($valor, FILTER_VALIDATE_EMAIL)) {
+                    $erros .=  $mensagem . "<BR>";
                 }
                 break;
             }
