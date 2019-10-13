@@ -10,46 +10,61 @@
 if (@$_SESSION['usuario']) {
     ?>
         <form method="post">
-        <input type="submit" name="botao" value="inserir">
+        <input type="submit" name="botao" value="Inserir">
         </form>
         <?php
-if (isset($_REQUEST['botao']) == 'inserir') {
+if (isset($_REQUEST['botao']) == 'Inserir') {
         include "incluir.php";
     }
 }
 $sql = "SELECT *, DATE_FORMAT (artData, '%d/%m/%Y %H:%i:%s' ) FROM `artigo` ORDER BY `artData` desc";
 $retorno = fazConsultaSegura($sql);
-foreach ($retorno as $item) {
-    ?>
-        <form method="post">
-        <table class="tableconsulta">
-        <tr>
-        <td>Título: </td>
-        <td><?=@$item['artTitul'];?></td>
-        </tr>
-        <tr>
-        <td>Texto: </td>
-        <td><?=@$item['artTexto'];?></td>
-        </tr>
-        <tr>
-        <td>Data: </td>
-        <td><?=@$item['artData'];?></td>
-        </tr>
-    <!-- arrumar -->
-    <?php
-    if(@$item['artImage'] != null)
-    {
-    ?>
-        <tr>
-        <td>Imagem: </td>
-        <td><img src="upload/<?=$item['artImage'];?>" alt="imagem do post"></td>
-        </tr>
-    <?php }
+
+if(@$_REQUEST['busca'] == 'ok'){
+    include("consulta_search.php");
+
+} else{
+    
+    foreach ($retorno as $item) {
+        @$texto=resumeTexto($item['artTexto'],$numPal=15);
+
         ?>
-    <!--  -->
-        </table>
-        </form>
+            <form method="post">
+            <table class="tableconsulta">
+            <tr>
+            <td>Título: </td>
+            <td><?=@$item['artTitul'];?></td>
+            </tr>
+            <tr>
+            <td>Texto: </td>
+            <td><?=@$texto;?></td>
+            </tr>
+            <tr>
+            <td>Data: </td>
+            <td><?=@$item['artData'];?></td>
+            </tr>
+        <!-- arrumar -->
         <?php
+        if(@$item['artImage'] != null)
+        {
+        ?>
+            <tr>
+            <td>Imagem: </td>
+            <td><img class="imagem_post"  src="upload/<?=$item['artImage'];?>" alt="imagem do post"></td>
+            </tr>
+        <?php }
+            ?>
+        <!--  -->
+            </table>
+            </form>
+            <?php
+
+}
+
+
+
+
+
 if (@$_SESSION['usuario']) {
         ?>
         <form action="alteracao_form.php" method="POST">

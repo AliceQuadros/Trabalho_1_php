@@ -5,15 +5,23 @@ $imagem = '';
 $posicao = '';
 $imagem = '';
 $uploadOk = 1;
-if (($_REQUEST['botao']) === 'enviar') { 
+if (($_REQUEST['botao']) === 'Enviar') { 
     $titulo = $_REQUEST['titulo'];
     $texto = $_REQUEST['texto'];
-    $imagem = $_FILES['upload']['name'];
+    @$imagem = $_FILES['upload']['name'];
     $posicao = $_REQUEST['posicao'];
     $tipoArquivoImagem = strtolower(pathinfo($imagem, PATHINFO_EXTENSION));
+    
 
-    if ($tipoArquivoImagem != "jpg" && $tipoArquivoImagem != "png" && $tipoArquivoImagem != "jpeg"
-        && $tipoArquivoImagem != "gif") {
+    if ($tipoArquivoImagem != "jpg" 
+    && $tipoArquivoImagem != "png" 
+    && $tipoArquivoImagem != "jpeg"
+    && $tipoArquivoImagem != "gif"
+    && $tipoArquivoImagem != "PNG"
+    && $tipoArquivoImagem != "JPG"
+    
+    ) {
+
         echo "Apenas JPG, JPEG, PNG e GIF são permitidos.<br>";
         $uploadOk = 0;
     }
@@ -55,6 +63,9 @@ if (($_REQUEST['botao']) === 'enviar') {
         // //    }
     }
 
-} else if ($_REQUEST['botao'] == 'inserir') {
+} else if ($_REQUEST['botao'] == 'Inserir') {
     include "incluir_form.php";
+}
+else if ($_REQUEST['botao'] == 'Cancelar') {
+    header("Location: index.php");
 }

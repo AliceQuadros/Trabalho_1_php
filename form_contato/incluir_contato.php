@@ -4,7 +4,7 @@ $uploadOk = 1;
 require_once "C:/xampp/htdocs/trabalho_1/Trabalho_1_php/funcoes.php";
 
 
-if (($_POST['botao']) === 'enviar') {
+if (($_POST['botao']) === 'Enviar') {
     $nome = $_POST['nome'];
     $sobrenome = $_POST['sobrenome'];
     $email = $_POST['email'];

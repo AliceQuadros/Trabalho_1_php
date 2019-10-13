@@ -19,7 +19,7 @@
             <input type="number" name="fone" value='<?=$fone?>' placeholder="(53) 999999999">
             <label for="espec">Especificações</label>
             <textarea name="mensagem" value='<?=$mensagem?>' placeholder="Digite sua Mensagem..."></textarea>
-            <button type="submit" name="botao" value="enviar">Enviar</button>
+            <button type="submit" name="botao" value="Enviar">Enviar</button>
         </form>
         </div>
  </section>

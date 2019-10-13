@@ -1,6 +1,16 @@
 <?php
 include "funcoes.php";
 $id = $_POST['codigo'];
+$nm_image = $_POST['image'];
+$imagem = $_FILES['upload']['name'];
+
+
+if ($imagem) {
+    unlink("upload/".$nm_image);
+    include "upload.php"; 
+    echo $imagem;
+}
+
     if ($_REQUEST['botao'] == 'salvar') {
 
         // $erros = validaForm($_REQUEST, array('nome:texto:Nome é obrigatório',
