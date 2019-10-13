@@ -1,8 +1,8 @@
 <?php
 $uploadOk = 1;
+session_start();
 
 require_once "C:/xampp/htdocs/trabalho_1/Trabalho_1_php/funcoes.php";
-
 
 if (($_POST['botao']) === 'enviar') {
     $nome = $_POST['nome'];
@@ -11,16 +11,30 @@ if (($_POST['botao']) === 'enviar') {
     $fone = $_POST['fone'];
     $mensagem = $_POST['mensagem'];
     // teste
+    $erros = validaForm($_POST, array(
+        'nome:texto:Nome ',
+        'sobrenome:texto:Sobrenome ',
+        'email:email:E-mail deve ser válido ',
+        'mensagem:texto:Mensagem '
+    ));
+    if ($erros != '') {
 
-    // 
-    $id = 0;
-    $sql = "INSERT INTO `contato` (`conNome`,`conSobre`,`conEmail`, `conFone`, `conTexto`) VALUES (?,?,?,?,?);";
-    $retorno = fazConsultaSegura($sql, array(
-        $nome,
-        $sobrenome,
-        $email,
-        $fone,
-        $mensagem), $id);
-    header("Location: ../index.php");
+        $_SESSION['erros'] = $erros;
+        $_SESSION['nome'] = $nome;
+        $_SESSION['sobrenome'] = $sobrenome;
+        $_SESSION['email'] = $email;
+        $_SESSION['mensagem'] = $mensagem;
+        header("Location: ../index.php?n=e");
 
+    } else {
+        $id = 0;
+        $sql = "INSERT INTO `contato` (`conNome`,`conSobre`,`conEmail`, `conFone`, `conTexto`) VALUES (?,?,?,?,?);";
+        $retorno = fazConsultaSegura($sql, array(
+            $nome,
+            $sobrenome,
+            $email,
+            $fone,
+            $mensagem), $id);
+        header("Location: ../index.php");
+    }
 }
