@@ -8,9 +8,11 @@ if(isset($_POST['botao-nao'])){
 	header("Location: index.php");
 }
 
-    echo ($id);
-
-    $sql = "delete from artigo where artCodig = ?";
+    $sql = "SELECT `artImage` from artigo where artCodig = ?";
+	$retorno = fazConsultaSegura($sql, array($id));
+	
+	$sql = "delete from artigo where artCodig = ?";
 	fazConsultaSegura($sql, array($id));
+	unlink("upload/".$retorno[0]['artImage']);
 	
 	header("Location: index.php");

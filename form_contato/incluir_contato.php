@@ -11,7 +11,8 @@ if (($_POST['botao']) === 'Enviar') {
     $fone = $_POST['fone'];
     $mensagem = $_POST['mensagem'];
     // teste
-    echo($nome);
+
+    // 
     $id = 0;
     $sql = "INSERT INTO `contato` (`conNome`,`conSobre`,`conEmail`, `conFone`, `conTexto`) VALUES (?,?,?,?,?);";
     $retorno = fazConsultaSegura($sql, array(
@@ -20,6 +21,6 @@ if (($_POST['botao']) === 'Enviar') {
         $email,
         $fone,
         $mensagem), $id);
-    // header("Location: index.php");
+    header("Location: ../index.php");
 
 }

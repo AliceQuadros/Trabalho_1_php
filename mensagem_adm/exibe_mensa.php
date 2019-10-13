@@ -1,6 +1,5 @@
 <?php
-require_once "C:/xampp/htdocs/trabalho_1/Trabalho_1_php/funcoes.php";
-
+include_once ("funcoes.php");
 
 $sql = "SELECT * FROM `contato`";
 $retorno = fazConsultaSegura($sql);

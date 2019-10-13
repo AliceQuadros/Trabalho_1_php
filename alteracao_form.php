@@ -6,7 +6,6 @@
 $id = $_POST['alterar'];
 $sql = "SELECT * FROM `artigo` WHERE `artCodig` = ?;";
 $retorno = fazConsultaSegura($sql, array($id));
-var_dump($retorno);
 ?>
 <div class="container">
 
@@ -23,7 +22,9 @@ var_dump($retorno);
         <input type="file"  name="upload" >
         <input type="reset" name="botao" value="voltar">
         <input type="submit" name="botao" value="salvar">
-        <input type="submit" name="botao" value="voltar">
+  
+ 
+
 
 
 </form>
