@@ -1,129 +1,129 @@
- 
  html, body {
-     background-color: #e9ebee;
-     height: 100%;
-     margin: o;
-     padding: 0;
+   background-color: #e9ebee;
+   height: 100%;
+   margin: o;
+   padding: 0;
  }
 
-.header {
-    font-weight: bold;
-    display: inline-block;
-    background-color: #fab316;
-    width: 100%;
-
+ .header {
+   font-weight: bold;
+   display: inline-block;
+   background-color: #fab316;
+   width: 100%;
  }
 
  nav a {
-    float: left;
-    display: block;
-    color: #1a242d;
-    text-align: center;
-    padding: 0.875em 1em;
-    text-decoration: none;
-    font-size: 1.063em;
-    font-family: Arial, Helvetica, sans-serif;
-  }  
+   float: left;
+   display: block;
+   color: #1a242d;
+   text-align: center;
+   padding: 0.875em 1em;
+   text-decoration: none;
+   font-size: 1.063em;
+   font-family: Arial, Helvetica, sans-serif;
+ }
 
-  nav a:hover {
-    border-bottom: 0.125em solid #1a242d;
-    color: #1a242d;
-  }
- 
-  nav a.active {
-    color:#1a242d;
-    border-bottom: 0.125em solid #1a242d;
-  }
-  
+ nav a:hover {
+   border-bottom: 0.125em solid #1a242d;
+   color: #1a242d;
+ }
 
-  .logo img {
-       width: 30%;
-       height: 30%; 
-  }
+ nav a.active {
+   color: #1a242d;
+   border-bottom: 0.125em solid #1a242d;
+ }
 
-.contato-form label{
-    display: block;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 18px;
-    line-height: 25px;
-    margin-bottom:4px; 
+ .logo img {
+   width: 30%;
+   height: 30%;
+ }
+
+ .contato-form label {
+   display: block;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-size: 18px;
+   line-height: 25px;
+   margin-bottom: 4px;
+ }
+
+ .contato-form input {
+   display: block;
+   width: 100%;
+   border: 4px solid #300314;
+   background: none;
+   padding: 7px 10px;
+   margin-bottom: 10px;
+   outline: none;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-size: 14px;
+ }  
+.form_login {
+  margin-top: 10px;
 }
+ .usuario_form::placeholder, .senha_form::placeholder {
+   font-weight: 400;
+ }
 
-.contato-form input{
-    display: block;
-    width: 100%;
-    border: 4px solid #300314;
-    background: none;
-    padding: 7px 10px;
-    margin-bottom: 10px;
-    outline: none;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 14px;
-}
+ .contato-form textarea {
+   display: block;
+   width: 100%;
+   height: 120px;
+   border: 4px solid #300314;
+   background: none;
+   padding: 7px 10px;
+   margin-bottom: 20px;
+   outline: none;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-size: 14px;
+ }
 
-.contato-form textarea{
-    display: block;
-    width: 100%;
-    height: 120px;
-    border: 4px solid #300314;
-    background: none;
-    padding: 7px 10px;
-    margin-bottom: 20px;
-    outline: none;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 14px;
-}
-section .container
-{
-    margin: 0px auto;
-}
+ section .container {
+   margin: 0px auto;
+ }
 
+ #rodape {
+   width: 100%;
+   margin: 0 auto;
+   position: absolute;
+   display: inline-block;
+   bottom: 0;
+   left: 0;
+   background-color: #1a242d;
+   margin-top: 10%;
+   height: 60px;
+ }
 
+ #copyright {
+   font-size: 0.687em;
+   color: #d9d9d9;
+   display: inline-block;
+   padding: 1em 0;
+   text-align: center;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   position: relative;
+ }
 
+ #copyright a {
+   color: white;
+   position: relative;
+ }
 
-  #rodape {
-    width: 100%;
-    margin: 0 auto;
-    position: absolute;
-    display: inline-block;
-    bottom: 0;
-    left:0;
-    background-color: #1a242d;
-    margin-top: 10%;
-    height: 60px;
-  }
+ #rodape a {
+   padding-top: 10px;
+   display: inline-block;
+   z-index: 10;
+ }
 
+ #rodape a svg {
+   width: 100%;
+   fill: white;
+ }
 
-  #copyright {
-    font-size: 0.687em;
-    color: #d9d9d9;
-    display: inline-block;
-    padding: 1em 0;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    position: relative;
-  }
-
-  #copyright a {
-    color: white;
-    position: relative;
-  }
-
-  #rodape a {
-    padding-top: 10px;
-    display: inline-block;
-    z-index: 10;
-  }
-  #rodape a svg {
-    width: 100%;
-    fill: white;
-  }
-
-  textarea {
-    padding: 10px;
-    line-height: 1.5;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 1px #999;
-    resize: none;
-}
+ textarea {
+   padding: 10px;
+   line-height: 1.5;
+   border-radius: 5px;
+   border: 1px solid #ccc;
+   box-shadow: 1px 1px 1px #999;
+   resize: none;
+ }
