@@ -1,6 +1,6 @@
 <?php
 
-require_once "C:/xampp/htdocs/trabalho_1/Trabalho_1_php/funcoes.php";
+include_once ("funcoes.php");
 
 
 $id = $_POST['botao-sim'];

@@ -31,7 +31,7 @@ if(isset($_REQUEST['p']))
 {
 $pag= $_REQUEST['p'];
 }
-include($pag .".php");
+include ($pag .".php");
 
 // include ("footer.php");
 

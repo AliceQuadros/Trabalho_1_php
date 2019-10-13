@@ -33,4 +33,5 @@ foreach ($retorno as $item) {
         ?>
         </table>
         </form>
+        <button><a href="index.php">Voltar</a></button>
         <?php }
