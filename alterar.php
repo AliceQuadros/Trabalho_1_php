@@ -19,7 +19,7 @@ if ($_REQUEST['botao'] == 'salvar') {
  
     $erros = validaForm($_POST, array(
         'titulo:texto:Titulo ',
-        'texto:texto:Texto ',
+        'texto:texto:Texto '
     ));
     if ($erros != '') {
  

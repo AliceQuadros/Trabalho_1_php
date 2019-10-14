@@ -24,7 +24,7 @@ include ("funcoes.php");
 include ("header.php");
 
 $pag="home";
-$vetValidas = array ("sobre", "form_contato/form","pesquisa","alteracao_form");
+$vetValidas = array ("sobre", "form_contato/form","pesquisa","alteracao_form","incluir_form");
 
 if(isset($_GET['n'])){
    
@@ -33,6 +33,10 @@ if(isset($_GET['n'])){
 if(isset($_GET['m'])){
    
     $pag = 'alteracao_form';
+ }
+ if(isset($_GET['b'])){
+   
+    $pag = 'home';
  }
 
 

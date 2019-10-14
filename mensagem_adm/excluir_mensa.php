@@ -1,6 +1,6 @@
 <?php
 
-include_once ("funcoes.php");
+include_once ("../funcoes.php");
 
 
 $id = $_POST['botao-sim'];

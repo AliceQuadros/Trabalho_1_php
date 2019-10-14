@@ -13,6 +13,10 @@ if (@$_SESSION['usuario']) {
         if (isset($_REQUEST['botao']) == 'Inserir') {
             include "incluir.php";
         }
+        if (isset($_GET['b'])) {
+            include "incluir.php";
+        
+        }
     }
     $sql = "SELECT *, DATE_FORMAT (artData, '%d/%m/%Y %H:%i:%s' ) FROM `artigo` ORDER BY `artData` desc";
     $retorno = fazConsultaSegura($sql);

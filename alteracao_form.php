@@ -25,7 +25,7 @@ $retorno = fazConsultaSegura($sql, array($id));
 
     Código:<input type="text" name="codigo" value="<?= isset($_GET['m']) ? $id : $retorno[0]['artCodig']?>" readonly><br>
 	*Titulo: <input type="text" name="titulo" value="<?=isset($_GET['m']) ? $titulo : $retorno[0]['artTitul']?>"><br>
-    *Texto: <textarea type="text" name="texto"><?=$retorno[0]['artTexto']?></textarea> <br>
+    *Texto: <textarea type="text" name="texto"><?=isset($_GET['m']) ? $texto : $retorno[0]['artTexto']?></textarea> <br>
     Posição: <input type="text" name="posicao" value="<?=$retorno[0]['artImpos']?>"> <br>
     <input type="hidden" name="image" value="<?=$retorno[0]['artImage']?>"> <br>
 
