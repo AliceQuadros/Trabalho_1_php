@@ -5,7 +5,8 @@ $sql = "SELECT * FROM `contato`";
 $retorno = fazConsultaSegura($sql);
 foreach ($retorno as $item) {
     ?>
-    <form method="post">
+    <div class="container">
+    <form method="post" class="exibe_mensagem_post">
         <table class="tableconsulta">
             <tr>
                 <td>Código: </td>
@@ -35,8 +36,10 @@ foreach ($retorno as $item) {
         </table>
     </form>
         <form action="mensagem_adm/excluir_mensa_teste.php" method="POST">
-               <button type="submit" name="excluir" value="<?=$item['conCodig'];?>">Excluir</button>
+               <button type="submit" name="excluir" value="<?=$item['conCodig'];?>" class="botao_base botao_exclui_mensagem">Excluir</button>
         </form>
+   
     <?php }
 
     ?>
+     </div>

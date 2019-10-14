@@ -67,6 +67,6 @@ if ($_REQUEST['botao'] == 'salvar') {
     //         echo("$erros<hr>");
     //         include("alteracao_form.php");
     //     }
-} else if (isset($_POST['botao']) == 'voltar') {
+} else if (isset($_POST['botao']) == 'Voltar') {
     header("Location: index.php");
 }

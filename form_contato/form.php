@@ -33,7 +33,7 @@
             <input type="number" name="fone" value='<?=$fone?>' placeholder="(53) 999999999">
             <label for="espec">*Mensagem</label>
             <textarea type='text' name="mensagem" value='' placeholder="Digite sua Mensagem..."><?=@$mensagem?></textarea>
-            <button type="submit" name="botao" value="enviar">Enviar</button>
+            <button type="submit" name="botao" value="enviar" class="botao_base botao_enviar_form_contato">Enviar</button>
         <p>* Campos obrigatórios</p>
 
         </form>

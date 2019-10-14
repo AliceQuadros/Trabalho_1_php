@@ -22,7 +22,10 @@ include ("funcoes.php");
 
 <?php
 include ("header.php");
+?> 
+<div class="container wrapper_content">
 
+<?php
 $pag="home";
 $vetValidas = array ("sobre", "form_contato/form","pesquisa","alteracao_form","incluir_form");
 
@@ -46,10 +49,13 @@ $pag= $_REQUEST['p'];
 }
 include ($pag .".php");
 
-//include ("footer.php");
 
 ?>
-
+</div>
 </body>
 
+<?php
+include ("footer.php");
+
+?>
 </html>

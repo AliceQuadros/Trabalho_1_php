@@ -1,8 +1,24 @@
 <!-- formulario de alteração (karine) -->
 <!-- mesmo formulario usado na inclusao de dados -->
 <?php
-session_start();
+include("header.php");
 include_once "funcoes.php";
+
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>ALIKA</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+</head>
+<body>
+    <?php
 
 if (isset($_GET['m'])) {
     echo ("Preencha todos os campos que são obrigatórios:<br> ");
@@ -33,8 +49,8 @@ $retorno = fazConsultaSegura($sql, array($id));
         <label for="imagem">Enviar Imagem, caso não adicionar, vai em branco</label> 
         <input type="file"  name="upload" >
         <p>* Campos obrigatórios</p>
-        <input type="reset" name="botao" value="voltar">
-        <input type="submit" name="botao" value="salvar">
+        <input type="reset" name="botao" value="Voltar" class="voltar_botao botao_base">
+        <input type="submit" name="botao" value="Salvar" class="salvar_botao botao_base">
   
  
 
@@ -42,6 +58,13 @@ $retorno = fazConsultaSegura($sql, array($id));
 
 </form>
 
+
+
 </div>
+</body>
 
+<?php
+include ("footer.php");
 
+?>
+</html>

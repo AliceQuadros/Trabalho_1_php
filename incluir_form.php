@@ -18,7 +18,7 @@
         <label for="imagem_form">Enviar Imagem</label>
         <input type="file" name="upload" value="" class="imagem_form" id="imagem_form"><br><br>
         <p>* Campos obrigatórios</p>
-        <input type="submit" name="botao" value="Enviar" class="enviar_post_form">
-        <input type="reset" name="botao" value="Cancelar" class="cancelar_post_form">
+        <input type="submit" name="botao" value="Enviar" class="enviar_post_form botao_base">
+        <input type="reset" name="botao" value="Cancelar" class="cancelar_post_form botao_base">
 
 </div>

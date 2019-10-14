@@ -1,5 +1,20 @@
-<?php
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>ALIKA</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+</head>
+<body>
+    <?php
 include "funcoes.php";
+include("header.php");
 
 @$id = $_POST['ver'];
 $sql = "SELECT * FROM `artigo` WHERE `artCodig` = ?";
@@ -20,6 +35,7 @@ foreach ($retorno as $item) {
         <td>Data: </td>
         <td><?=$item['artData'];?></td>
         </tr>
+        
 
     <?php
     if($item['artImage'] != null)
@@ -33,5 +49,14 @@ foreach ($retorno as $item) {
         ?>
         </table>
         </form>
-        <button><a href="index.php">Voltar</a></button>
+        <button class="botao_voltar"><a href="index.php">Voltar</a></button>
         <?php }
+        ?>
+        </div>
+</body>
+
+<?php
+include ("footer.php");
+
+?>
+</html>

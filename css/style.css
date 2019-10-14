@@ -1,8 +1,11 @@
  html, body {
    background-color: #e9ebee;
-   height: 100%;
-   margin: o;
+   margin: 0;
    padding: 0;
+   position: relative;
+   /* height: 77vh; */
+   height: auto;
+  
  }
 
  .header {
@@ -11,7 +14,9 @@
    background-color: #fab316;
    width: 100%;
  }
-
+/* .altura_header {
+  height: 11vh;
+} */
  nav a {
    float: left;
    display: block;
@@ -46,7 +51,7 @@
    margin-bottom: 4px;
  }
 
- .contato-form input {
+ .contato-form input:not(.imagem_form, .enviar_post_form) {
    display: block;
    width: 100%;
    border: 4px solid #300314;
@@ -104,9 +109,10 @@
     font-size: 14px;
   }
 
+
   .posicao_form {
     display: block;
-    width: 10%;
+    width: 30%;
     border: 4px solid #300314;
     background: none;
     padding: 7px 10px;
@@ -121,7 +127,7 @@
     position: relative;
    height: 24px;
    vertical-align: bottom;
-   margin-bottom: -10px;
+   margin-bottom: 30px;
    margin-left: 1 !important;
  }
   
@@ -163,8 +169,19 @@
     width: 350px;
     height: auto;
   }
-
- .botao_form, .form_search_button, .enviar_post_form, .cancelar_post_form {
+  .form_crud {
+  display:inline-block;
+  margin: 20px 0;
+  }
+  
+  .form_crud_add {
+    margin-bottom: 30px;
+  }
+  .form_crud_normal{
+    margin-bottom: 30px;
+    margin-top: 10px;
+  }
+ .botao_base, .form_search_button, .botao_voltar {
    border-radius: 5px;
    background: white;
    color: black;
@@ -179,25 +196,38 @@
    outline: none;
    position: relative;
    top: 50%;
-   transform: translateY(-50%);
    margin-left: 10px;
  }
 
- .botao_form:hover, .form_search_button:hover, .enviar_post_form:hover, .cancelar_post_form:hover {
+ .form_search_button {
+    transform: translateY(-50%);
+ 
+ }
+
+ .botao_base:hover, .form_search_button:hover, .botao_voltar:hover {
    box-shadow: 0 4px #525252;
    top: 2px;
  }
 
- .botao_form:after, .form_search_button:after, .enviar_post_form:after, .cancelar_post_form:after {
+  
+ .botao_base:after, .form_search_button:after, .botao_voltgar:after {
    content: '';
    position: absolute;
    z-index: -1;
    transition: all 0.3s;
  }
-
- .botao_form:active, .form_search_button:active {
+a {
+  text-decoration: none;
+  color: black;
+}
+ .botao_base:active, .form_search_button:active, .botao_voltar:active
+  {
    box-shadow: 0 0 #525252;
    top: 6px;
+ }
+
+ .wrapper_content{
+   margin-top:20px;
  }
 
  .botao_form_sair {
@@ -241,16 +271,17 @@
    margin: 0px auto;
  }
 
+ .container {
+   height: 100%;
+   
+ }
+
  #rodape {
    width: 100%;
    margin: 0 auto;
-   position: absolute;
-   display: inline-block;
-   bottom: 0;
-   left: 0;
    background-color: #1a242d;
-   margin-top: 10%;
-   height: 60px;
+   /* height: 9vh; */
+
  }
 
  #copyright {
@@ -260,7 +291,7 @@
    padding: 1em 0;
    text-align: center;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
-   position: relative;
+   position: static;
  }
 
  #copyright a {

@@ -1,7 +1,8 @@
 <!-- header -->
 <?php session_start(); ?>
-<header class="header">
+<header class="header altura_header">
     <div class="container">
+
         <div class="logo grid-2">
             <a href="?p=home">
                 <img src="img/logo.png" alt="Logo ALIKA">
