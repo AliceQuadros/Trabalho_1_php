@@ -42,7 +42,7 @@ $pag= $_REQUEST['p'];
 }
 include ($pag .".php");
 
-// include ("footer.php");
+//include ("footer.php");
 
 ?>
 

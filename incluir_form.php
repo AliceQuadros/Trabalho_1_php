@@ -4,14 +4,20 @@
 
 <div class="container">
 
-    <form method="post" enctype="multipart/form-data">
-        Titulo: <input type="text" name="titulo" value="<?=$titulo?>"><br>
-        Texto: <textarea type="text" name="texto"><?=$texto?></textarea> <br>
-        Posição: <input type="text" name="posicao" value="<?=$posicao?>"> <br>
-        <label for="imagem">Enviar Imagem</label>
-        <input type="file" name="upload" value="<?=$imagem?>">
-        <input type="submit" name="botao" value="enviar">
-        <input type="submit" name="botao" value="cancelar">
-    </form>
+    <form method="post" class="contato-form grid-8" enctype="multipart/form-data">
+
+        <label for="titulo_form">Título:</label>
+        <input type="text" name="titulo" value="" class="titulo_form" id="titulo_form"><br>
+        <label for="textarea_enviar">Texto:</label>
+        <textarea type="text" name="texto" value="" id="textarea_enviar" class="textarea_enviar"></textarea><br>
+        <label for="posicao_form">Posição:</label>
+        <select name="posicao" class="posicao_form" id="posicao_form">
+            <option value="D">Direita</option>
+            <option value="E">Esquerda</option>
+        </select>
+        <label for="imagem_form">Enviar Imagem</label>
+        <input type="file" name="upload" value="" class="imagem_form" id="imagem_form"><br><br>
+        <input type="submit" name="botao" value="Enviar" class="enviar_post_form">
+        <input type="reset" name="botao" value="Cancelar" class="cancelar_post_form">
 
 </div>

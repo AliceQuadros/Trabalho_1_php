@@ -34,8 +34,8 @@
  }
 
  .logo img {
-   width: 30%;
-   height: 30%;
+   width: 70px;
+   height: 70px;
  }
 
  .contato-form label {
@@ -56,12 +56,6 @@
    outline: none;
    font-family: Georgia, 'Times New Roman', Times, serif;
    font-size: 14px;
- }  
-.form_login {
-  margin-top: 10px;
-}
- .usuario_form::placeholder, .senha_form::placeholder {
-   font-weight: 400;
  }
 
  .contato-form textarea {
@@ -75,6 +69,172 @@
    outline: none;
    font-family: Georgia, 'Times New Roman', Times, serif;
    font-size: 14px;
+ }
+.titulo_form{
+  width:40%;
+}
+ .textarea_enviar {
+   height: 240px;
+   width: 50%;
+   line-height: 1.5;
+   border-radius: 5px;
+   border: 1px solid #ccc;
+   box-shadow: 1px 1px 1px #999;
+   resize: none;
+   display: block;
+   border: 4px solid #300314;
+   background: none;
+   padding: 7px 10px;
+   margin-bottom: 20px;
+   outline: none;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-size: 14px;
+ }
+
+.titulo_form {
+
+    display: block;
+    width: 50%;
+    border: 4px solid #300314;
+    background: none;
+    padding: 7px 10px;
+    margin-bottom: 10px;
+    outline: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+  }
+
+  .posicao_form {
+    display: block;
+    width: 10%;
+    border: 4px solid #300314;
+    background: none;
+    padding: 7px 10px;
+    margin-bottom: 10px;
+    outline: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+  }
+ 
+ 
+  .enviar_post_form, .cancelar_post_form {
+    position: relative;
+   height: 24px;
+   vertical-align: bottom;
+   margin-bottom: -10px;
+   margin-left: 1 !important;
+ }
+  
+
+ .form_wrapper {
+   margin-top: 10px;
+ }
+
+ .form_search {
+   width: 70%;
+ }
+
+ .form_search::placeholder {
+   font-weight: 400;
+ }
+
+ .form_search_button {
+   position: relative;
+   height: 24px;
+   vertical-align: bottom;
+   width: 35px;
+   margin-bottom: -10px;
+   margin-left: 1 !important;
+ }
+
+ .form_search_button img {
+   height: 100%;
+ }
+
+ .form_login, .form_logout {
+   margin-top: 10px;
+ }
+
+ .usuario_form::placeholder, .senha_form::placeholder {
+   font-weight: 400;
+ }
+
+  .imagem_post {
+    width: 350px;
+    height: auto;
+  }
+
+ .botao_form, .form_search_button, .enviar_post_form, .cancelar_post_form {
+   border-radius: 5px;
+   background: white;
+   color: black;
+   box-shadow: 0 6px #525252;
+   transition: none;
+   border: none;
+   font-family: inherit;
+   font-size: inherit;
+   cursor: pointer;
+   display: inline-block;
+   font-weight: 400;
+   outline: none;
+   position: relative;
+   top: 50%;
+   transform: translateY(-50%);
+   margin-left: 10px;
+ }
+
+ .botao_form:hover, .form_search_button:hover, .enviar_post_form:hover, .cancelar_post_form:hover {
+   box-shadow: 0 4px #525252;
+   top: 2px;
+ }
+
+ .botao_form:after, .form_search_button:after, .enviar_post_form:after, .cancelar_post_form:after {
+   content: '';
+   position: absolute;
+   z-index: -1;
+   transition: all 0.3s;
+ }
+
+ .botao_form:active, .form_search_button:active {
+   box-shadow: 0 0 #525252;
+   top: 6px;
+ }
+
+ .botao_form_sair {
+   border-radius: 5px;
+   background: white;
+   color: black;
+   box-shadow: 0 6px #525252;
+   transition: none;
+   border: none;
+   font-family: inherit;
+   font-size: inherit;
+   color: 14px;
+   cursor: pointer;
+   display: inline-block;
+   font-weight: 400;
+   outline: none;
+   position: relative;
+   top: 50%;
+   transform: translateY(-50%);
+   margin-left: 10px;
+ }
+
+ .botao_form_sair:hover {
+   box-shadow: 0 4px #525252;
+   top: 2px;
+ }
+
+ .botao_form_sair:after {
+   content: '';
+   position: absolute;
+   z-index: -1;
+   transition: all 0.3s;
+ }
+
+ .botao_form_sair:active {
+   box-shadow: 0 0 #525252;
+   top: 6px;
  }
 
  section .container {
@@ -120,7 +280,6 @@
  }
 
  textarea {
-   padding: 10px;
    line-height: 1.5;
    border-radius: 5px;
    border: 1px solid #ccc;

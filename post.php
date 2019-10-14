@@ -1,12 +1,12 @@
 <?php
 include "funcoes.php";
 
-$id = $_POST['ver'];
+@$id = $_POST['ver'];
 $sql = "SELECT * FROM `artigo` WHERE `artCodig` = ?";
 $retorno = fazConsultaSegura($sql,array($id));
 foreach ($retorno as $item) {
     ?>
-        <form method="post">
+       
         <table class="tableconsulta">
         <tr>
         <td>Título: </td>
@@ -27,7 +27,7 @@ foreach ($retorno as $item) {
     ?>
         <tr>
         <td>Imagem: </td>
-        <td><img src="upload/<?=$item['artImage'];?>" alt="imagem do post"></td>
+        <td><img class="imagem_post"  src="upload/<?=$item['artImage'];?>" alt="imagem do post"></td>
         </tr>
     <?php }
         ?>

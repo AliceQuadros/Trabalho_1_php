@@ -2,7 +2,7 @@
 $uploadOk = 1;
 session_start();
 
-require_once "C:/xampp/htdocs/trabalho_1/Trabalho_1_php/funcoes.php";
+require_once "funcoes.php";
 
 if (($_POST['botao']) === 'enviar') {
     $nome = $_POST['nome'];
@@ -10,6 +10,7 @@ if (($_POST['botao']) === 'enviar') {
     $email = $_POST['email'];
     $fone = $_POST['fone'];
     $mensagem = $_POST['mensagem'];
+    include("../valida_form.php");
     // teste
     $erros = validaForm($_POST, array(
         'nome:texto:Nome ',
