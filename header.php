@@ -1,4 +1,7 @@
 <!-- header -->
+<?php
+session_start();
+?>
 <header class="header">
     <div class="container">
         <div class="logo grid-4">
@@ -12,9 +15,12 @@
             <a href="?p=sobre">Sobre</a>
             <?php
             if (@$_SESSION['usuario']) {
+                
                 ?>
                 <a href="?p=mensagem_adm/exibe_mensa">Mensagens</a>
             <?php } else {
+                echo('ALOOOOOOOO');
+                
                 ?>
                 <a href="?p=form_contato/form">Contate-nos</a>
             <?php }
@@ -26,7 +32,6 @@
             </ul>
         </nav>
         <?php
-        session_start();
         include("verificalogin.php");
         ?>
     </div>

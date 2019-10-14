@@ -30,7 +30,7 @@ $retorno = fazConsultaSegura($sql, array($id));
     <input type="hidden" name="image" value="<?=$retorno[0]['artImage']?>"> <br>
 
     Imagem: <img src="upload/<?=$retorno[0]['artImage']?>" alt="imagem do post">
-        <label for="imagem">Enviar Imagem</label>
+        <label for="imagem">Enviar Imagem, Caso nenhuma enviada será colocada em branco</label>
         <input type="file" name="upload" >
         <input type="submit" name="botao" value="voltar">
         <input type="submit" name="botao" value="salvar">

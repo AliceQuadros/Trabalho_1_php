@@ -32,7 +32,7 @@ if ($_REQUEST['botao'] == 'salvar') {
     } else {
 
         if ($uploadOk != 0) {
-            if ($imagem != null) {
+            if ($imagem) {
                 $tipoArquivoImagem = strtolower(pathinfo($imagem, PATHINFO_EXTENSION));
                 if ($tipoArquivoImagem != "jpg" && $tipoArquivoImagem != "png" && $tipoArquivoImagem != "jpeg"
                     && $tipoArquivoImagem != "gif") {
@@ -41,7 +41,8 @@ if ($_REQUEST['botao'] == 'salvar') {
                 if ($uploadOk == 0) {
                     echo "Apenas JPG, JPEG, PNG e GIF são permitidos.<br>";
                 }
-            } if ($imagem) {
+            } 
+            if ($imagem) {
                 unlink("upload/" . $nm_image);
                 include "upload.php";
             }
