@@ -10,4 +10,4 @@ if(isset($_POST['botao-nao'])){
 }
     $sql = "delete from contato where conCodig = ?";
 	fazConsultaSegura($sql, array($id));
-	header("Location: ../index.php");
+	header("Location: ../index.php?r=p");

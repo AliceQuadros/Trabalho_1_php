@@ -14,8 +14,12 @@ if ($_REQUEST['botao'] == 'salvar') {
     $texto = $_POST['texto'];
     $imagem = $_FILES['upload']['name'];
     $posicao = $_POST['posicao'];
- 
-   
+    // if ($imagem == '')
+    // {
+    //     echo("coloque uma imagem");
+    //     include_once("alteracao_form.php");
+    // }
+
  
     $erros = validaForm($_POST, array(
         'titulo:texto:Titulo ',

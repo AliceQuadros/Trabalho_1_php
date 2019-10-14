@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 $uploadOk = 1;
 
 include_once("../funcoes.php");
