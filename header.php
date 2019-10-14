@@ -1,4 +1,5 @@
 <!-- header -->
+<?php session_start(); ?>
 <header class="header">
     <div class="container">
         <div class="logo grid-2">
@@ -21,12 +22,11 @@
             ?>
 
 
-            <!--<img src="img/search.png" alt="pesquisar">-->
+
 
             </ul>
         </nav>
         <?php
-        session_start();
         include("pesquisa_form.php");
         include("verificalogin.php");
 

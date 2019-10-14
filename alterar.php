@@ -8,7 +8,7 @@ $imagem = $_FILES['upload']['name'];
 if ($imagem) {
     unlink("upload/".$nm_image);
     include "upload.php"; 
-    echo $imagem;
+  
 }
 
     if ($_REQUEST['botao'] == 'salvar') {
