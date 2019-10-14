@@ -55,13 +55,6 @@ if (@$_SESSION['usuario']) {
                     </table>
                 </form>
             <?php
-
-                }
-
-
-
-
-
                 if (@$_SESSION['usuario']) {
                     ?>
                 <form action="post.php" method="POST">
@@ -74,6 +67,13 @@ if (@$_SESSION['usuario']) {
                     <button type="submit" name="excluir" value="<?= $item['artCodig']; ?>">excluir</button>
                 </form>
         <?php
+                }
+
+
+
+
+
+
 
 
             }

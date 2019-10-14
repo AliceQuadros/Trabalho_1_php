@@ -27,7 +27,7 @@ $retorno = fazConsultaSegura($sql, array($id));
 	Titulo: <input type="text" name="titulo" value="<?=isset($_GET['m']) ? $titulo : $retorno[0]['artTitul']?>"><br>
     Texto: <textarea type="text" name="texto"><?=$retorno[0]['artTexto']?></textarea> <br>
     Posição: <input type="text" name="posicao" value="<?=$retorno[0]['artImpos']?>"> <br>
-    <input type="text" name="image" value="<?=$retorno[0]['artImage']?>"> <br>
+    <input type="hidden" name="image" value="<?=$retorno[0]['artImage']?>"> <br>
 
     Imagem: <img class="imagem_post" src="upload/<?=$retorno[0]['artImage']?>" alt="imagem do post">
         <label for="imagem">Enviar Imagem, caso não adicionar, vai em branco</label> 
