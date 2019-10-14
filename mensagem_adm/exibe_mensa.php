@@ -1,5 +1,5 @@
 <?php
-include_once ("funcoes.php");
+include_once("funcoes.php");
 
 $sql = "SELECT * FROM `contato`";
 $retorno = fazConsultaSegura($sql);
