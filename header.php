@@ -10,7 +10,7 @@
         </div>
         <nav class="grid-6 header-menu">
 
-            <a href="?p=home" class="active">Home</a>
+            <a href="?p=home">Home</a>
             <a href="?p=sobre">Sobre</a>
             <?php
             if (@$_SESSION['usuario']) {

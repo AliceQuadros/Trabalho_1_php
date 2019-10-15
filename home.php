@@ -1,4 +1,4 @@
-<!--criar separado no incluir_form -->
+<!-- criar separado no incluir_form
 <!-- criar um botao que chame a inclusao -->
 
 <!-- na home tem que aparecer os posts, e embaixo ou outro lugar q tu quiser colocar tem que ter o botão de alterar e de excluir -->
@@ -54,12 +54,16 @@ if (@$_SESSION['usuario']) {
                         ?>
                 <!--  -->
         </form>
-        <form action="post.php" class="form_crud" method="POST">
-            <button type="submit" name="ver" value="<?= $item['artCodig']; ?>" class="ver_post_botao botao_base">Ver Post</button>
-        </form>
+        <!-- <form action="post.php" class="form_crud" method="POST">
+            <button type="submit" name="ver" value="" class="ver_post_botao botao_base">Ver Post</button>
+        </form> -->
         <?php
                 if (@$_SESSION['usuario']) {
+                
                     ?>
+                      <form action="post.php" class="form_crud" method="POST">
+            <button type="submit" name="ver" value="<?= $item['artCodig']; ?>" class="ver_post_botao botao_base">Ver Post</button>
+        </form>
             <form action="alteracao_form.php" class="form_crud" method="POST">
                 <button type="submit" name="alterar" value="<?= $item['artCodig']; ?>" class="altera_botao botao_base">Alterar</button>
             </form>

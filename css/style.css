@@ -39,10 +39,13 @@
    height: 70px;
  }
 
+ 
  .contato-form p {
    margin: 30px 0 20px;
    font-family: Georgia, 'Times New Roman', Times, serif;
  }
+
+ 
 
  .contato-form label {
    display: block;
@@ -63,6 +66,10 @@
    font-family: Georgia, 'Times New Roman', Times, serif;
    font-size: 14px;
  }
+
+ .excluir_mensa input[type="text"]{
+  width: 20px !important;
+}
 
  .contato-form.excluir input {
    width: 50px;
@@ -173,6 +180,7 @@
    width: 350px;
    height: auto;
  }
+ 
 
  .form_crud {
    display: inline-block;
@@ -278,6 +286,7 @@
  }
 
  .exibe_mensagem_post {
+   margin-top: 15px;
    margin-bottom: 10px;
    border: 1px solid;
    font-family: Georgia, 'Times New Roman', Times, serif;
@@ -286,6 +295,7 @@
  .exibe_mensagem_post td+td {
    padding-left: 20px;
  }
+
 
  .full-height {
    width: 100%;
@@ -399,4 +409,26 @@
    border: 1px solid #ccc;
    box-shadow: 1px 1px 1px #999;
    resize: none;
+ }
+
+ .teste {
+   display: flex;
+   flex-direction: column;
+   margin: 200px 0 0 0 auto;
+   justify-content: center;
+ }
+ .teste_2 {
+  margin: 0 auto;
+
+ }
+ .teste_3
+ {
+  margin: 0 auto;
+  display: flex;
+
+ }
+ .teste_4
+ {
+  margin: 0 auto;
+  display: flex;
  }

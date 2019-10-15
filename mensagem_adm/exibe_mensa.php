@@ -3,9 +3,13 @@ include_once("funcoes.php");
 
 $sql = "SELECT * FROM `contato`";
 $retorno = fazConsultaSegura($sql);
+?>
+
+<div class="container mensagens">
+    <?php
 foreach ($retorno as $item) {
     ?>
-    <div class="container mensagens">
+   
     <form method="post" class="exibe_mensagem_post">
         <table class="tableconsulta">
             <tr>

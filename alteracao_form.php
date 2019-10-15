@@ -1,6 +1,7 @@
 <!-- formulario de alteração (karine) -->
 <!-- mesmo formulario usado na inclusao de dados -->
 <?php
+session_start();
 include_once "funcoes.php";
 
 ?>
@@ -51,8 +52,11 @@ $retorno = fazConsultaSegura($sql, array($id));
         <label class="label-altera" for="imagem">Enviar Imagem, caso não adicione nenhuma, ficará sem imagem</label> 
         <input type="file"  name="upload" >
         <p>* Campos obrigatórios</p>
+        <!-- <input type="submit" name="botao" value="Voltar">
+        <input type="submit" name="botao" value="Salvar" > -->
+        
         <button class="voltar_botao botao_base"><a href="index.php">Voltar</a></button>
-        <input type="submit" name="botao" value="Salvar" class="salvar_botao botao_base">
+        <input type="submit" name="botao" value="Salvar" class="salvar_botao botao_base"> 
   
  
 
