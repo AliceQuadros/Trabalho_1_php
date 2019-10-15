@@ -5,7 +5,7 @@ $sql = "SELECT * FROM `contato`";
 $retorno = fazConsultaSegura($sql);
 foreach ($retorno as $item) {
     ?>
-    <div class="container">
+    <div class="container mensagens">
     <form method="post" class="exibe_mensagem_post">
         <table class="tableconsulta">
             <tr>

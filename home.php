@@ -73,6 +73,7 @@ if (@$_SESSION['usuario']) {
                 <button type="submit" name="excluir" value="<?= $item['artCodig']; ?>" class="exclui_botao botao_base">Excluir</button>
            
             </form>
+        <hr>
             
 <?php
         }

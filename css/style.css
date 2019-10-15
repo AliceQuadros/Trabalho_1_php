@@ -3,10 +3,8 @@
    margin: 0;
    padding: 0;
    position: relative;
-   /* height: 77vh; */
    height: auto;
-  
- }
+   }
 
  .header {
    font-weight: bold;
@@ -14,9 +12,7 @@
    background-color: #fab316;
    width: 100%;
  }
-/* .altura_header {
-  height: 11vh;
-} */
+
  nav a {
    float: left;
    display: block;
@@ -43,6 +39,10 @@
    height: 70px;
  }
 
+ .contato-form p {
+  margin-top: 40px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
  .contato-form label {
    display: block;
    font-family: Georgia, 'Times New Roman', Times, serif;
@@ -51,7 +51,9 @@
    margin-bottom: 4px;
  }
 
- .contato-form input:not(.imagem_form, .enviar_post_form) {
+ .contato-form input[type="text"], 
+ .contato-form input[type="number"],
+ .contato-form input[type="email"] {
    display: block;
    width: 100%;
    border: 4px solid #300314;
@@ -228,6 +230,7 @@ a {
 
  .wrapper_content{
    margin-top:20px;
+   min-height: calc(100vh - 148px);
  }
 
  .botao_form_sair {
@@ -273,7 +276,10 @@ a {
 
  .container {
    height: 100%;
-   
+ }
+
+ .container .sobre {
+   min-height: 100vh;
  }
 
  #rodape {
