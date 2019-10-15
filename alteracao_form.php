@@ -41,14 +41,17 @@ $retorno = fazConsultaSegura($sql, array($id));
     Código:<input type="text" name="codigo" value="<?= isset($_GET['m']) ? $id : $retorno[0]['artCodig']?>" readonly><br>
 	*Titulo: <input type="text" name="titulo" value="<?=isset($_GET['m']) ? $titulo : $retorno[0]['artTitul']?>"><br>
     *Texto: <textarea type="text" name="texto"><?=isset($_GET['m']) ? $texto : $retorno[0]['artTexto']?></textarea> <br>
-    Posição: <input type="text" name="posicao" value="<?=$retorno[0]['artImpos']?>"> <br>
+    Posição: <select  class="posicao_form" id="posicao_form" name="posicao" value="<?=$retorno[0]['artImpos']?>">
+            <option value="D">Direita</option>
+            <option value="E">Esquerda</option>
+        </select> <br>
     <input type="hidden" name="image" value="<?=$retorno[0]['artImage']?>"> <br>
 
-    Imagem: <img class="imagem_post" src="upload/<?=$retorno[0]['artImage']?>" alt="imagem do post">
-        <label for="imagem">Enviar Imagem, caso não adicione nenhuma, ficará sem imagem</label> 
+    Imagem:<br> <img class="imagem_post" src="upload/<?=$retorno[0]['artImage']?>" alt="imagem do post">
+        <label class="label-altera" for="imagem">Enviar Imagem, caso não adicione nenhuma, ficará sem imagem</label> 
         <input type="file"  name="upload" >
         <p>* Campos obrigatórios</p>
-        <input type="reset" name="botao" value="Voltar" class="voltar_botao botao_base">
+        <button class="voltar_botao botao_base"><a href="index.php">Voltar</a></button>
         <input type="submit" name="botao" value="Salvar" class="salvar_botao botao_base">
   
  
