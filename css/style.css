@@ -277,6 +277,11 @@ a {
  .container {
    height: 100%;
  }
+ 
+ body > .container {
+   height: 100%;
+  padding: 20px 0;
+ }
 
  .container .sobre {
    min-height: 100vh;

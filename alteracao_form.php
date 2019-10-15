@@ -1,24 +1,23 @@
 <!-- formulario de alteração (karine) -->
 <!-- mesmo formulario usado na inclusao de dados -->
 <?php
-include("header.php");
 include_once "funcoes.php";
 
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="utf-8">
-    <title>ALIKA</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/grid.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="img/favicon.ico">
-</head>
-<body>
-    <?php
+    
+    <head>
+        <meta charset="utf-8">
+        <title>ALIKA</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/grid.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" href="img/favicon.ico">
+    </head>
+    <body>
+        <?php
 
 if (isset($_GET['m'])) {
     echo ("Preencha todos os campos que são obrigatórios:<br> ");
@@ -63,8 +62,4 @@ $retorno = fazConsultaSegura($sql, array($id));
 </div>
 </body>
 
-<?php
-include ("footer.php");
-
-?>
 </html>
